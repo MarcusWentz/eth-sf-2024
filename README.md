@@ -106,6 +106,12 @@ https://superbridge.app/unichain-sepolia
 
 ### Block Explorer
 
+#### Etherscan
+
+https://sepolia.uniscan.xyz/
+
+#### Blockscout
+
 https://unichain-sepolia.blockscout.com/
 
 ## Forge Install Contract Libraries
