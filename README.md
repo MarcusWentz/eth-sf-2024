@@ -67,7 +67,7 @@ https://sepolia.uniscan.xyz/
 
 ### CurveTest.sol deployed and verified on Blockscout
 
-https://unichain-sepolia.blockscout.com/address/0x82Fa8539F40F7317CEd662130d1F98eE1DE687a2?tab=contract
+https://unichain-sepolia.blockscout.com/address/0xfE854EB335786037aDb33C36936f679CA127C3CD?tab=contract_code
 
 ## Foundry
 
