@@ -9,8 +9,9 @@ import {PoolKey} from "v4-core/src/types/PoolKey.sol";
 import {PoolId, PoolIdLibrary} from "v4-core/src/types/PoolId.sol";
 import {BalanceDelta} from "v4-core/src/types/BalanceDelta.sol";
 import {BeforeSwapDelta, BeforeSwapDeltaLibrary} from "v4-core/src/types/BeforeSwapDelta.sol";
+import {CurveTest} from "./CurveTest.sol";
 
-contract Counter is BaseHook {
+contract Counter is BaseHook, CurveTest {
     using PoolIdLibrary for PoolKey;
 
     // NOTE: ---------------------------------------------------------

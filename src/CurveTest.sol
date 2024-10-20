@@ -4,7 +4,7 @@ pragma solidity 0.8.26;
 // Unsigned
 import { SD59x18 , convert } from "@prb/math/src/SD59x18.sol"; 
 
-contract curveTestSigned {
+contract CurveTest {
 
   function aaaaaaaaaaa() external pure returns (int256 result) {
     SD59x18 x = convert(25);
