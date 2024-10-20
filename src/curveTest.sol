@@ -44,6 +44,16 @@ contract curveTest {
     result = delta.unwrap();
   }
 
+  function testEmulateFunction14() external pure returns (uint256 result) {
+    UD60x18 Rx = convert(1.0 ether);
+    UD60x18 oneEther = convert(1.0 ether);
+    UD60x18 num = oneEther - testEmulateFunction12Raw();
+    UD60x18 den = testEmulateFunction12Raw();
+    UD60x18 ratio = num.div(den);
+    UD60x18 delta = ratio - Rx;
+    result = delta.unwrap();
+  }
+
   /// @notice Calculates the square root for the given signed number.
   function unsignedSquareRootTestSmallValueReturnRawValue() external pure returns (UD60x18 result) {
     // 1 wei in uint256 is actually 1 ether in UD60x18 fixed point types.
