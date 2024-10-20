@@ -9,7 +9,7 @@ https://github.com/MarcusWentz/eth-sf-2024/tree/main/presentation/img/p_animatio
 When n is between -1 and 0 it bulges the uni v3 concentrated liquidity position (concave).
 
 
-<img width="919"  src=https://github.com/MarcusWentz/eth-sf-2024/tree/main//img/p_convex2.png>
+<img width="919"  src=https://github.com/MarcusWentz/eth-sf-2024/blob/main/img/p_convex2.png>
 
 
 When n is between 0 and 1 it dents a uni v3 concentrated liquidity position (convex). If we enter a volatile mode for the asset, we can jump either from A -> B or C -> C to B offering better price impact in both directions. [Desmos example](https://www.desmos.com/calculator/ytbz4dbur5)
