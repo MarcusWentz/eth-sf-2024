@@ -35,7 +35,7 @@ Some assets can have thinner tails than others so we can use parameter n to spec
 To fit our data:
 
 
-<img width="919" src=https://github.com/MarcusWentz/eth-sf-2024/tree/main/presentation/img/p_actualdata.png>
+<img width="919" src=  https://github.com/MarcusWentz/eth-sf-2024/blob/main/img/p_actualdata.png>
 
 
 
