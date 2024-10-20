@@ -104,3 +104,7 @@ forge install https://github.com/Uniswap/v4-core --no-commit
 ```
 forge install https://github.com/Uniswap/v4-periphery --no-commit
 ```
+### prb-math
+```
+forge install PaulRBerg/prb-math@release-v4 --no-commit
+```
