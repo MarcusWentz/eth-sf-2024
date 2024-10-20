@@ -138,3 +138,17 @@ forge create src/prbMathSquareRootTesting.sol:prbMathSquareRootTesting \
 --verifier blockscout \
 --verifier-url https://unichain-sepolia.blockscout.com/api/
 ```
+
+## Forge Verify Contract Already Deployed
+```shell
+forge verify-contract \
+--rpc-url https://sepolia.unichain.org \
+<contract_address> \
+src/prbMathSquareRootTesting.sol:prbMathSquareRootTesting \
+--verifier blockscout \
+--verifier-url https://unichain-sepolia.blockscout.com/api/
+```
+
+### Blockscout Foundry Documentation
+
+https://docs.blockscout.com/devs/verification/foundry-verification
