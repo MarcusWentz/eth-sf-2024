@@ -117,15 +117,24 @@ https://unichain-sepolia.blockscout.com/
 ## Forge Install Contract Libraries
 
 ### v4-core
-```
+```shell
 forge install https://github.com/Uniswap/v4-core --no-commit
 ```
 ### v4-periphery
-```
+```shell
 forge install https://github.com/Uniswap/v4-periphery --no-commit
 ```
 ### prb-math
-```
+```shell
 forge install PaulRBerg/prb-math@release-v4 --no-commit
 ```
 
+## Forge Deploy and Verify Blockscout
+```shell
+forge create src/prbMathSquareRootTesting.sol:prbMathSquareRootTesting \
+--private-key $devTestnetPrivateKey \
+--rpc-url https://sepolia.unichain.org \
+--verify \
+--verifier blockscout \
+--verifier-url https://unichain-sepolia.blockscout.com/api/
+```
