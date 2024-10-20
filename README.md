@@ -4,7 +4,7 @@
 
 Moses - custom curve hook that interpolates between a constant sum (curve), constant product (univ2), concentrated range (univ3), convex concentrated liquidity, and exponential-tailed liquidity with just one parameter ’n’.
 
-<img width="919"  src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_animation.mp4>
+<img width="919"  src=https://github.com/v-for-vasya/eth-sf-2024/blob/presentation/img/p_animation.mp4>
 When n is between -1 and 0 it bulges the uni v3 concentrated liquidity position (concave).
 
 p_convex2
