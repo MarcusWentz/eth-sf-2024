@@ -13,7 +13,13 @@ contract curveTestSigned {
   }
 
   function testEmulateFunction12() external pure returns (int256 result) {
-    SD59x18 x = convert(1.0 ether);
+    // SD59x18 x = convert(1.0 ether);
+    SD59x18 oneEther = convert(1 ether);
+    SD59x18 twoEther = convert(2 ether);
+    SD59x18 lnOfTwo = twoEther.ln();
+    SD59x18 zeroEther = convert(1 ether - 1 ether);
+    SD59x18 xExp = lnOfTwo.mul(zeroEther);
+    SD59x18 x = (xExp.exp()*oneEther);
     SD59x18 y = convert(0.4 ether);
     SD59x18 subtractValue = x - y; 
     SD59x18 lnRawValue = subtractValue.ln(); 
