@@ -68,3 +68,8 @@ src/CurveTest.sol:CurveTest \
 ### Blockscout Foundry Documentation
 
 https://docs.blockscout.com/devs/verification/foundry-verification
+
+### Run a Hook Test Script
+```shell
+forge script script/00_Counter.s.sol:CounterScript
+```
