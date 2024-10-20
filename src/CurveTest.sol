@@ -12,7 +12,7 @@ contract CurveTest {
     result = expRawValue.unwrap();
   }
 
-  function testEmulateFunction12() external pure returns (int256 result) {
+  function testEmulateFunction12() public pure returns (int256 result) {
     // SD59x18 x = convert(1.0 ether);
     SD59x18 oneEther = convert(1 ether);
     SD59x18 twoEther = convert(2 ether);
