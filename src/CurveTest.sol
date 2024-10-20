@@ -6,13 +6,7 @@ import { SD59x18 , convert } from "@prb/math/src/SD59x18.sol";
 
 contract CurveTest {
 
-  function aaaaaaaaaaa() external pure returns (int256 result) {
-    SD59x18 x = convert(25);
-    SD59x18 expRawValue = x.exp(); 
-    result = expRawValue.unwrap();
-  }
-
-  function testEmulateFunction12() public pure returns (int256 result) {
+  function testEmulateFunction12() external pure returns (int256 result) {
     // SD59x18 x = convert(1.0 ether);
     SD59x18 oneEther = convert(1 ether);
     SD59x18 twoEther = convert(2 ether);
@@ -30,27 +24,15 @@ contract CurveTest {
     SD59x18 y = (yLnDeltaNegative.exp()*oneEther);
 
     // SD59x18 subtractValue = x - y; 
-
-
     SD59x18 lnRawValue = (x-y).ln(); 
     SD59x18 divideByVarN = lnRawValue.div(convert(1)); 
     SD59x18 expRawValue = divideByVarN.exp(); 
-    result = expRawValue.unwrap() / (1 ether);
+    
     // result = 1;
+    result = expRawValue.unwrap() / (1 ether);
 
 
   }
-
-  function debug() external pure returns (int256 result) {
-    SD59x18 oneEther = convert(1 ether);
-    SD59x18 positiveFactor = convert(25);
-    SD59x18 yLnPos = positiveFactor.ln();
-    SD59x18 yLnNeg = convert(10).ln();
-    SD59x18 yLnDelta = yLnPos - yLnNeg;
-    SD59x18 y = (yLnDelta.exp()*oneEther);
-    result = y.unwrap() / (1 ether);
-  }
-
 
   function testEmulateFunction12Raw() public pure returns (SD59x18 result) {
     SD59x18 x = convert(1.0 ether);
@@ -81,6 +63,22 @@ contract CurveTest {
     SD59x18 ratio = num.div(den);
     SD59x18 delta = ratio - Rx;
     result = delta.unwrap();
+  }
+
+  function debugValueY() external pure returns (int256 result) {
+    SD59x18 oneEther = convert(1 ether);
+    SD59x18 positiveFactor = convert(25);
+    SD59x18 yLnPos = positiveFactor.ln();
+    SD59x18 yLnNeg = convert(10).ln();
+    SD59x18 yLnDelta = yLnPos - yLnNeg;
+    SD59x18 y = (yLnDelta.exp()*oneEther);
+    result = y.unwrap() / (1 ether);
+  }
+
+  function debugValueExp() external pure returns (int256 result) {
+    SD59x18 x = convert(25);
+    SD59x18 expRawValue = x.exp(); 
+    result = expRawValue.unwrap();
   }
 
 }
