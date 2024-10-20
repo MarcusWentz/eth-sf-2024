@@ -17,10 +17,10 @@ contract curveTestSigned {
     SD59x18 y = convert(0.4 ether);
     SD59x18 subtractValue = x - y; 
     SD59x18 lnRawValue = subtractValue.ln(); 
-    SD59x18 divValue = convert(1 ether);
+    SD59x18 divValue = convert(1);
     SD59x18 divideByVarN = lnRawValue.div(divValue); 
     SD59x18 expRawValue = divideByVarN.exp(); 
-    result = expRawValue.unwrap();
+    result = expRawValue.unwrap() / (1 ether);
   }
 
   function testEmulateFunction12Raw() public pure returns (SD59x18 result) {
