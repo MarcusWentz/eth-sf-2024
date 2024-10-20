@@ -21,6 +21,12 @@ contract curveTestSigned {
     SD59x18 xExp = lnOfTwo.mul(zeroEther);
     SD59x18 x = (xExp.exp()*oneEther);
     SD59x18 y = convert(0.4 ether);
+    
+    // SD59x18 RxPlusIx = convert(1 ether + 1 ether);
+    // SD59x18 positiveFactor = RxPlusIx + oneEther;
+    // SD59x18 yExp = positiveFactor.mul(convert(-(1 ether)));
+    // SD59x18 y = (yExp.exp()*oneEther);
+
     SD59x18 subtractValue = x - y; 
     SD59x18 lnRawValue = subtractValue.ln(); 
     SD59x18 divValue = convert(1);
