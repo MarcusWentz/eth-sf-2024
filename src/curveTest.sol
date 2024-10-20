@@ -11,7 +11,18 @@ contract curveTest {
     UD60x18 expRawValue = x.exp(); 
     result = expRawValue.unwrap();
   }
-  
+
+  function testEmulateFunction12() external pure returns (uint256 result) {
+    UD60x18 x = convert(19);
+    UD60x18 y = convert(2);
+    UD60x18 subtractValue = x - y; 
+    UD60x18 lnRawValue = subtractValue.ln(); 
+    // UD60x18 divideByVarN = lnRawValue.div(1); 
+    UD60x18 divideByVarN = lnRawValue; 
+    UD60x18 expRawValue = divideByVarN.exp(); 
+    result = expRawValue.unwrap();
+  }
+
   /// @notice Calculates the square root for the given signed number.
   function unsignedSquareRootTestSmallValueReturnRawValue() external pure returns (UD60x18 result) {
     // 1 wei in uint256 is actually 1 ether in UD60x18 fixed point types.
