@@ -94,6 +94,20 @@ Additional resources:
 
 [v4-by-example](https://v4-by-example.org)
 
+## Unichain
+
+### Metamask Chainlist
+
+https://chainlist.org/?search=unichain&testnets=true
+
+### Bridge From Sepolia 
+
+https://superbridge.app/unichain-sepolia
+
+### Block Explorer
+
+https://unichain-sepolia.blockscout.com/
+
 ## Forge Install Contract Libraries
 
 ### v4-core
@@ -108,3 +122,4 @@ forge install https://github.com/Uniswap/v4-periphery --no-commit
 ```
 forge install PaulRBerg/prb-math@release-v4 --no-commit
 ```
+
