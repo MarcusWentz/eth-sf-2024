@@ -55,7 +55,7 @@ contract Counter is BaseHook, CurveTest {
         override
         returns (bytes4, BeforeSwapDelta, uint24)
     {
-        testEmulateFunction12();
+        testEmulateFunction12Raw();
         beforeSwapCount[key.toId()]++;
         return (BaseHook.beforeSwap.selector, BeforeSwapDeltaLibrary.ZERO_DELTA, 0);
     }

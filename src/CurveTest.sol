@@ -6,7 +6,7 @@ import { SD59x18 , convert } from "@prb/math/src/SD59x18.sol";
 
 contract CurveTest {
 
-  function testEmulateFunction12() external pure returns (int256 result) {
+  function testEmulateFunction12ReturnInt256() public pure returns (int256 result) {
     // SD59x18 x = convert(1.0 ether);
     SD59x18 oneEther = convert(1 ether);
     SD59x18 twoEther = convert(2 ether);
@@ -45,7 +45,7 @@ contract CurveTest {
     result = expRawValue;
   }
 
-  function testEmulateFunction13() external pure returns (int256 result) {
+  function testEmulateFunction13() public pure returns (int256 result) {
     SD59x18 Ry = convert(1.0 ether);
     SD59x18 oneEther = convert(1.0 ether);
     SD59x18 num = oneEther - testEmulateFunction12Raw();
@@ -55,7 +55,7 @@ contract CurveTest {
     result = delta.unwrap();
   }
 
-  function testEmulateFunction14() external pure returns (int256 result) {
+  function testEmulateFunction14() public pure returns (int256 result) {
     SD59x18 Rx = convert(1.0 ether);
     SD59x18 oneEther = convert(1.0 ether);
     SD59x18 num = oneEther - testEmulateFunction12Raw();
@@ -65,7 +65,7 @@ contract CurveTest {
     result = delta.unwrap();
   }
 
-  function debugValueY() external pure returns (int256 result) {
+  function debugValueY() public pure returns (int256 result) {
     SD59x18 oneEther = convert(1 ether);
     SD59x18 positiveFactor = convert(25);
     SD59x18 yLnPos = positiveFactor.ln();
@@ -75,7 +75,7 @@ contract CurveTest {
     result = y.unwrap() / (1 ether);
   }
 
-  function debugValueExp() external pure returns (int256 result) {
+  function debugValueExp() public pure returns (int256 result) {
     SD59x18 x = convert(25);
     SD59x18 expRawValue = x.exp(); 
     result = expRawValue.unwrap();

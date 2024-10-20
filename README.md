@@ -47,7 +47,7 @@ forge install PaulRBerg/prb-math@release-v4 --no-commit
 
 ### Deploy and Verify Blockscout
 ```shell
-forge create src/prbMathSquareRootTesting.sol:prbMathSquareRootTesting \
+forge create src/CurveTest.sol:CurveTest \
 --private-key $devTestnetPrivateKey \
 --rpc-url https://sepolia.unichain.org \
 --verify \
@@ -60,7 +60,7 @@ forge create src/prbMathSquareRootTesting.sol:prbMathSquareRootTesting \
 forge verify-contract \
 --rpc-url https://sepolia.unichain.org \
 <contract_address> \
-src/prbMathSquareRootTesting.sol:prbMathSquareRootTesting \
+src/CurveTest.sol:CurveTest \
 --verifier blockscout \
 --verifier-url https://unichain-sepolia.blockscout.com/api/
 ```
