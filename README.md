@@ -4,35 +4,40 @@
 
 Moses - custom curve hook that interpolates between a constant sum (curve), constant product (univ2), concentrated range (univ3), convex concentrated liquidity, and exponential-tailed liquidity with just one parameter ’n’.
 
+https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_animation.mp4
 
 When n is between -1 and 0 it bulges the uni v3 concentrated liquidity position (concave).
 
 
 <img src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_convex2.png>
 
-https://github.com/v-for-vasya/lammbert/assets/11951513/e3bb078e-1c59-41c1-b923-8afa7350f6ca
-
 
 
 When n is between 0 and 1 it dents a uni v3 concentrated liquidity position (convex). If we enter a volatile mode for the asset, we can jump either from A -> B or C -> C to B offering better price impact in both directions.
 
-p_convex1
+<img src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_convex1.png>
 
 Alternatively, this curve is also great for a more capital efficient version of Univ2 as one increases n beyond 1.
 
+https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_vidfat.mp4
 p_vidfat.mp4
 
 Consider two volatile assets - ETH and DOGE and observe how they diffuse across time:
 
-p_3dvideo.mp4
 
+https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_3dvideo.mp4
 Some assets can have thinner tails than others so we can use parameter n to specify the thickness:
 
-P_fattail , p_thintail
+
+<img src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_fattail.png>
+
+<img src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_thintail.png>
 
 To fit our data:
 
-p_actualdata
+
+<img src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_actualdata.png>
+
 
 
 Custom curve using prb-math.
