@@ -4,10 +4,15 @@
 
 Moses - custom curve hook that interpolates between a constant sum (curve), constant product (univ2), concentrated range (univ3), convex concentrated liquidity, and exponential-tailed liquidity with just one parameter ’n’.
 
-<img width="919"  src="https://github.com/v-for-vasya/lammbert/assets/11951513/6d2b5f7c-55cf-48a2-b77f-a1e17652770b">
+
 When n is between -1 and 0 it bulges the uni v3 concentrated liquidity position (concave).
 
-p_convex2
+
+<img src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_convex2.png>
+
+https://github.com/v-for-vasya/lammbert/assets/11951513/e3bb078e-1c59-41c1-b923-8afa7350f6ca
+
+
 
 When n is between 0 and 1 it dents a uni v3 concentrated liquidity position (convex). If we enter a volatile mode for the asset, we can jump either from A -> B or C -> C to B offering better price impact in both directions.
 
