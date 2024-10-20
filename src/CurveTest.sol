@@ -73,7 +73,7 @@ contract CurveTest {
     SD59x18 num = oneEther - testEmulateFunction12RawSD59x18();
     SD59x18 den = testEmulateFunction12RawSD59x18();
     SD59x18 ratio = num.div(den);
-    SD59x18 delta = Ry - ratio;
+    SD59x18 delta = Ry - (-ratio.mul(convert(1 ether))) ;
     result = delta.unwrap();
   }
 
@@ -83,7 +83,7 @@ contract CurveTest {
     SD59x18 num = oneEther - testEmulateFunction12RawSD59x18();
     SD59x18 den = testEmulateFunction12RawSD59x18();
     SD59x18 ratio = num.div(den);
-    SD59x18 delta = ratio - Rx;
+    SD59x18 delta = (-ratio.mul(convert(1 ether))) - Rx;
     result = delta.unwrap();
   }
 
