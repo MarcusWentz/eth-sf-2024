@@ -9,13 +9,12 @@ https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_animation.mp4
 When n is between -1 and 0 it bulges the uni v3 concentrated liquidity position (concave).
 
 
-<img src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_convex2.png>
+<img width="919"  src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_convex2.png>
 
 
+When n is between 0 and 1 it dents a uni v3 concentrated liquidity position (convex). If we enter a volatile mode for the asset, we can jump either from A -> B or C -> C to B offering better price impact in both directions. [Desmos example](https://www.desmos.com/calculator/ytbz4dbur5)
 
-When n is between 0 and 1 it dents a uni v3 concentrated liquidity position (convex). If we enter a volatile mode for the asset, we can jump either from A -> B or C -> C to B offering better price impact in both directions.
-
-<img src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_convex1.png>
+<img width="919" src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_convex1.png>
 
 Alternatively, this curve is also great for a more capital efficient version of Univ2 as one increases n beyond 1.
 
@@ -29,14 +28,14 @@ https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_3dvideo.mp4
 Some assets can have thinner tails than others so we can use parameter n to specify the thickness:
 
 
-<img src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_fattail.png>
+<img width="919" src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_fattail.png>
 
-<img src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_thintail.png>
+<img width="919" src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_thintail.png>
 
 To fit our data:
 
 
-<img src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_actualdata.png>
+<img width="919" src=https://github.com/MarcusWentz/eth-sf-2024/blob/presentation/img/p_actualdata.png>
 
 
 
