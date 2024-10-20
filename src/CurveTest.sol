@@ -35,13 +35,35 @@ contract CurveTest {
   }
 
   function testEmulateFunction12RawSD59x18() public pure returns (SD59x18 result) {
-    SD59x18 x = convert(1.0 ether);
-    SD59x18 y = convert(0.4 ether);
-    SD59x18 subtractValue = x - y; 
-    SD59x18 lnRawValue = subtractValue.ln(); 
-    SD59x18 divValue = convert(1 ether);
-    SD59x18 divideByVarN = lnRawValue.div(divValue); 
+    // SD59x18 x = convert(1.0 ether);
+    // SD59x18 y = convert(0.4 ether);
+    // SD59x18 subtractValue = x - y; 
+    // SD59x18 lnRawValue = subtractValue.ln(); 
+    // SD59x18 divValue = convert(1 ether);
+    // SD59x18 divideByVarN = lnRawValue.div(divValue); 
+    // SD59x18 expRawValue = divideByVarN.exp(); 
+
+    // SD59x18 x = convert(1.0 ether);
+    SD59x18 oneEther = convert(1 ether);
+    SD59x18 twoEther = convert(2 ether);
+    SD59x18 lnOfTwo = twoEther.ln();
+    SD59x18 zeroEther = convert(1 ether - 1 ether);
+    SD59x18 xExp = lnOfTwo.mul(zeroEther);
+    SD59x18 x = (xExp.exp()*oneEther);
+
+    // SD59x18 y = convert(0.4 ether);
+    SD59x18 positiveFactor = convert(25);
+    SD59x18 yLnPos = positiveFactor.ln();
+    SD59x18 yLnNeg = convert(10).ln();
+    SD59x18 yLnDeltaRaw = yLnPos - yLnNeg;
+    SD59x18 yLnDeltaNegative = -yLnDeltaRaw;
+    SD59x18 y = (yLnDeltaNegative.exp()*oneEther);
+
+    // SD59x18 subtractValue = x - y; 
+    SD59x18 lnRawValue = (x-y).ln(); 
+    SD59x18 divideByVarN = lnRawValue.div(convert(1)); 
     SD59x18 expRawValue = divideByVarN.exp(); 
+
     result = expRawValue;
   }
 
@@ -79,6 +101,14 @@ contract CurveTest {
     SD59x18 x = convert(25);
     SD59x18 expRawValue = x.exp(); 
     result = expRawValue.unwrap();
+  }
+
+  function debugValueRatio() public pure returns (SD59x18 ratio) {
+    // SD59x18 Ry = convert(1.0 ether);
+    SD59x18 oneEther = convert(1.0 ether);
+    SD59x18 num = oneEther - testEmulateFunction12RawSD59x18();
+    SD59x18 den = testEmulateFunction12RawSD59x18();
+    ratio = num.div(den);
   }
 
 }
