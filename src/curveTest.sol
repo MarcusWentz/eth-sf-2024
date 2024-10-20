@@ -17,10 +17,31 @@ contract curveTest {
     UD60x18 y = convert(0.4 ether);
     UD60x18 subtractValue = x - y; 
     UD60x18 lnRawValue = subtractValue.ln(); 
-    UD60x18 divValue = convert(1);
+    UD60x18 divValue = convert(1 ether);
     UD60x18 divideByVarN = lnRawValue.div(divValue); 
     UD60x18 expRawValue = divideByVarN.exp(); 
     result = expRawValue.unwrap();
+  }
+
+  function testEmulateFunction12Raw() public pure returns (UD60x18 result) {
+    UD60x18 x = convert(1.0 ether);
+    UD60x18 y = convert(0.4 ether);
+    UD60x18 subtractValue = x - y; 
+    UD60x18 lnRawValue = subtractValue.ln(); 
+    UD60x18 divValue = convert(1 ether);
+    UD60x18 divideByVarN = lnRawValue.div(divValue); 
+    UD60x18 expRawValue = divideByVarN.exp(); 
+    result = expRawValue;
+  }
+
+  function testEmulateFunction13() external pure returns (uint256 result) {
+    UD60x18 Ry = convert(1.0 ether);
+    UD60x18 oneEther = convert(1.0 ether);
+    UD60x18 num = oneEther - testEmulateFunction12Raw();
+    UD60x18 den = testEmulateFunction12Raw();
+    UD60x18 ratio = num.div(den);
+    UD60x18 delta = Ry - ratio;
+    result = delta.unwrap();
   }
 
   /// @notice Calculates the square root for the given signed number.
