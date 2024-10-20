@@ -94,3 +94,13 @@ Additional resources:
 
 [v4-by-example](https://v4-by-example.org)
 
+## Forge Install Contract Libraries
+
+### v4-core
+```
+forge install https://github.com/Uniswap/v4-core --no-commit
+```
+### v4-periphery
+```
+forge install https://github.com/Uniswap/v4-periphery --no-commit
+```
