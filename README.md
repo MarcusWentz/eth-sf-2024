@@ -69,7 +69,9 @@ src/CurveTest.sol:CurveTest \
 
 https://docs.blockscout.com/devs/verification/foundry-verification
 
-### Run a Hook Test Script
+### Run a Hook Test Script With Unichain
 ```shell
-forge script script/00_Counter.s.sol:CounterScript
+forge script script/00_Counter.s.sol:CounterScript \
+--private-key $devTestnetPrivateKey \
+--rpc-url https://sepolia.unichain.org 
 ```

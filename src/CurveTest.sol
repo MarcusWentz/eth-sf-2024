@@ -34,7 +34,7 @@ contract CurveTest {
 
   }
 
-  function testEmulateFunction12Raw() public pure returns (SD59x18 result) {
+  function testEmulateFunction12RawSD59x18() public pure returns (SD59x18 result) {
     SD59x18 x = convert(1.0 ether);
     SD59x18 y = convert(0.4 ether);
     SD59x18 subtractValue = x - y; 
@@ -45,21 +45,21 @@ contract CurveTest {
     result = expRawValue;
   }
 
-  function testEmulateFunction13() public pure returns (int256 result) {
+  function testEmulateFunction13ReturnInt256() public pure returns (int256 result) {
     SD59x18 Ry = convert(1.0 ether);
     SD59x18 oneEther = convert(1.0 ether);
-    SD59x18 num = oneEther - testEmulateFunction12Raw();
-    SD59x18 den = testEmulateFunction12Raw();
+    SD59x18 num = oneEther - testEmulateFunction12RawSD59x18();
+    SD59x18 den = testEmulateFunction12RawSD59x18();
     SD59x18 ratio = num.div(den);
     SD59x18 delta = Ry - ratio;
     result = delta.unwrap();
   }
 
-  function testEmulateFunction14() public pure returns (int256 result) {
+  function testEmulateFunction14ReturnInt256() public pure returns (int256 result) {
     SD59x18 Rx = convert(1.0 ether);
     SD59x18 oneEther = convert(1.0 ether);
-    SD59x18 num = oneEther - testEmulateFunction12Raw();
-    SD59x18 den = testEmulateFunction12Raw();
+    SD59x18 num = oneEther - testEmulateFunction12RawSD59x18();
+    SD59x18 den = testEmulateFunction12RawSD59x18();
     SD59x18 ratio = num.div(den);
     SD59x18 delta = ratio - Rx;
     result = delta.unwrap();
