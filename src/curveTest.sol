@@ -13,8 +13,8 @@ contract curveTest {
   }
 
   function testEmulateFunction12() external pure returns (uint256 result) {
-    UD60x18 x = convert(19);
-    UD60x18 y = convert(2);
+    UD60x18 x = convert(1.0 ether);
+    UD60x18 y = convert(0.4 ether);
     UD60x18 subtractValue = x - y; 
     UD60x18 lnRawValue = subtractValue.ln(); 
     // UD60x18 divideByVarN = lnRawValue.div(1); 
